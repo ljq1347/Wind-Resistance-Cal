@@ -1,0 +1,94 @@
+<div class="step-content">
+    <div class="speed-section">
+        <h4 class="speed-title">Pole Height</h4>
+        <div class="speed-inputs">
+            <div class="speed-input-group active" id="group-poleHeight-ft">
+                <input type="number" id="step2-poleHeightFoot" value="20" onchange="Step2App.convertLength('poleHeight', 'foot')" onclick="Step2App.selectInput('poleHeight', 'foot')">
+                <span class="unit">ft</span>
+            </div>
+            <div class="speed-input-group" id="group-poleHeight-mm">
+                <input type="number" id="step2-poleHeightMm" onchange="Step2App.convertLength('poleHeight', 'mm')" onclick="Step2App.selectInput('poleHeight', 'mm')">
+                <span class="unit">mm</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="speed-section">
+        <h4 class="speed-title">Top Diameter</h4>
+        <div class="speed-inputs">
+            <div class="speed-input-group active" id="group-topDiameter-in">
+                <input type="number" id="step2-topDiameterIn" onchange="Step2App.convertLength('topDiameter', 'in')" onclick="Step2App.selectInput('topDiameter', 'in')">
+                <span class="unit">in</span>
+            </div>
+            <div class="speed-input-group" id="group-topDiameter-mm">
+                <input type="number" id="step2-topDiameterMm" value="100" onchange="Step2App.convertLength('topDiameter', 'mm')" onclick="Step2App.selectInput('topDiameter', 'mm')">
+                <span class="unit">mm</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="speed-section">
+        <h4 class="speed-title">Bottom Diameter</h4>
+        <div class="speed-inputs">
+            <div class="speed-input-group active" id="group-bottomDiameter-in">
+                <input type="number" id="step2-bottomDiameterIn" onchange="Step2App.convertLength('bottomDiameter', 'in')" onclick="Step2App.selectInput('bottomDiameter', 'in')">
+                <span class="unit">in</span>
+            </div>
+            <div class="speed-input-group" id="group-bottomDiameter-mm">
+                <input type="number" id="step2-bottomDiameterMm" value="140" onchange="Step2App.convertLength('bottomDiameter', 'mm')" onclick="Step2App.selectInput('bottomDiameter', 'mm')">
+                <span class="unit">mm</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group">
+            <label>Wall Thickness t (mm)</label>
+            <input type="number" id="step2-wallThickness" value="4.0" step="0.1">
+        </div>
+        
+    </div>
+
+    <div class="result-card" id="step2-sectionModulusDisplay">Section modulus pending calculation...</div>
+
+    <h3 style="margin-top:20px;">Steel Properties</h3>
+    <div class="form-row">
+        <div class="input-group">
+            <label>Steel Grade</label>
+            <select id="step2-steelGrade" onchange="Step2App.updateSteelProperties()">
+                <option value="GR65" selected>GR65</option>
+                <option value="Q345">Q345</option>
+                <option value="Q235">Q235</option>
+                <option value="S355">S355</option>
+                <option value="S275">S275</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>Yield Strength</label>
+            <span id="step2-yieldStress">235</span> MPa
+        </div>
+        <div class="input-group">
+            <label>Elastic Modulus</label>
+            <span id="step2-elasticityModulus">206</span> GPa
+        </div>
+    </div>
+
+    <div class="step2-btn-row">
+        <button onclick="Step2App.confirm()">Confirm</button>
+    </div>
+    
+    
+    <div class="formula-display" id="step2-formula">
+        
+        <div class="standards-list">
+            <strong>Applicable Standards:</strong>
+            <div class="standards-items">
+                <div>ASCE 7-22 - Minimum Design Loads for Buildings and Other Structures</div>
+                <div>EN 1991-1-4:2005 - Eurocode 1: Wind Actions</div>
+                <div>AASHTO LRFD 2020 - Structural Supports for Highway Signs, Luminaires, and Traffic Signals</div>
+                <div>EN 40 - Lighting Columns (Steel and Aluminum)</div>
+            </div>
+        </div>
+        
+    </div>
+</div>

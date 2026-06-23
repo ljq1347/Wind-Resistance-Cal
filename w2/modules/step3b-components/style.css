@@ -1,0 +1,209 @@
+
+.step3-section {
+    padding: var(--spacing-sm);
+}
+
+.step3-warning {
+    color: var(--warning-color);
+    font-size: var(--font-sm);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: var(--warning-light);
+    border-left: 3px solid var(--warning-color);
+}
+
+.warning-text {
+    color: var(--warning-color);
+    font-size: var(--font-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.check-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-sm);
+    margin-bottom: var(--spacing-md);
+    table-layout: fixed;
+}
+
+.check-table th {
+    background: var(--primary-color);
+    color: var(--text-white);
+    padding: var(--spacing-sm) var(--spacing-xs);
+    text-align: center;
+    font-weight: var(--font-weight-semibold);
+}
+
+.check-table th:nth-child(1) { width: 15%; }
+.check-table th:nth-child(2) { width: 20%; }
+.check-table th:nth-child(3) { width: 15%; }
+.check-table th:nth-child(4) { width: 25%; }
+.check-table th:nth-child(5) { width: 25%; }
+
+
+.input-wrapper input:disabled {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    cursor: default;
+    color: var(--text-primary);
+}
+
+.input-wrapper input:disabled + .unit-inside {
+    color: var(--text-muted);
+}
+
+.check-table td {
+    padding: var(--spacing-xs) var(--spacing-xs);
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    text-align: center;
+}
+
+.check-table tr:nth-child(even) {
+    background: var(--bg-secondary);
+}
+
+.check-table tr:hover {
+    background: var(--border-light);
+}
+
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: var(--spacing-xs) 35px var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-sm);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.input-wrapper input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.unit-inside {
+    position: absolute;
+    right: var(--spacing-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+    pointer-events: none;
+}
+
+
+.double-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.double-input-container .input-wrapper {
+    width: 100%;
+}
+
+.step3-btn-row {
+    margin-top: var(--spacing-lg);
+    text-align: right;
+}
+
+.step3-btn-row button {
+    padding: var(--spacing-sm) var(--spacing-lg) !important;
+    background: var(--text-muted) !important;
+    color: var(--text-white) !important;
+    border: none !important;
+    border-radius: var(--radius-md) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    cursor: pointer !important;
+    transition: background 0.2s !important;
+}
+
+.step3-btn-row button:hover {
+    background: var(--text-secondary) !important;
+}
+
+.step3-btn-row button.confirmed {
+    background: var(--success-color) !important;
+}
+
+.step3-btn-row button.confirmed:hover {
+    background: var(--success-dark) !important;
+}
+
+
+.formula-display {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: none;
+    border-radius: 0;
+    border-left: none;
+}
+
+.formula-title {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--font-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-muted);
+}
+
+.formula-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.formula-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    align-items: baseline;
+}
+
+.formula-result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    align-items: baseline;
+    margin-top: var(--spacing-xs);
+    padding-top: var(--spacing-xs);
+    border-top: 1px solid var(--border-light);
+}
+
+.formula-label {
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-muted);
+    font-size: var(--font-xs);
+    white-space: nowrap;
+}
+
+.formula-text {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-xs);
+    color: var(--text-light);
+}
+
+.formula-text.highlight {
+    color: var(--text-muted);
+    font-weight: var(--font-weight-bold);
+}
+
+
+@media (max-width: 600px) {
+    .formula-display {
+        padding: var(--spacing-sm);
+    }
+    
+    .formula-item,
+    .formula-result {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

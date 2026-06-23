@@ -1,0 +1,286 @@
+
+.step1-section {
+    padding: var(--spacing-sm);
+}
+
+
+.speed-section {
+    margin-bottom: var(--spacing-md);
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    border: none !important;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.wind-pressure-hint {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-md);
+    padding-left: 2px;
+}
+
+.speed-title {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--font-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.speed-inputs {
+    display: flex;
+    gap: var(--spacing-sm);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.speed-input-group {
+    flex: 1 1 0%;
+    display: flex;
+    align-items: center;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.speed-input-group.active {
+    opacity: 1;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(43, 87, 154, 0.1);
+}
+
+.speed-input-group input {
+    flex: 1 1 auto;
+    border: none;
+    outline: none;
+    font-size: var(--font-base);
+    font-weight: var(--font-weight-bold);
+    background: transparent;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.speed-input-group .unit {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+    font-weight: var(--font-weight-semibold);
+    margin-left: var(--spacing-sm);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.step1-warning {
+    color: var(--warning-color);
+    font-size: var(--font-sm);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: var(--warning-light);
+    border-left: 3px solid var(--warning-color);
+}
+
+.step1-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.step1-grid .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.step1-grid .input-group label {
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.step1-grid .input-group input {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-base);
+}
+
+.step1-grid .input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(43, 87, 154, 0.2);
+}
+
+.step1-air {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-light);
+}
+
+.step1-air label {
+    display: block;
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.step1-air input {
+    width: 120px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-base);
+}
+
+.step1-btn-row {
+    margin-top: var(--spacing-lg);
+    text-align: right;
+}
+
+.step1-btn-row button {
+    padding: var(--spacing-sm) var(--spacing-lg) !important;
+    background: var(--text-muted) !important;
+    color: var(--text-white) !important;
+    border: none !important;
+    border-radius: var(--radius-md) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    cursor: pointer !important;
+    transition: background 0.2s !important;
+}
+
+.step1-btn-row button:hover {
+    background: var(--text-secondary) !important;
+}
+
+.step1-btn-row button.confirmed {
+    background: var(--success-color) !important;
+}
+
+.step1-btn-row button.confirmed:hover {
+    background: var(--success-dark) !important;
+}
+
+
+.formula-display {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: none;
+    border-radius: 0;
+    border-left: none;
+}
+
+.formula-title {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--font-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-muted);
+}
+
+.formula-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.formula-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    align-items: baseline;
+}
+
+.formula-result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    align-items: baseline;
+    margin-top: var(--spacing-xs);
+    padding-top: var(--spacing-xs);
+    border-top: 1px solid var(--border-light);
+}
+
+.formula-label {
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-muted);
+    font-size: var(--font-xs);
+    white-space: nowrap;
+}
+
+.formula-text {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-xs);
+    color: var(--text-light);
+}
+
+.formula-text.highlight {
+    color: var(--text-muted);
+    font-weight: var(--font-weight-bold);
+}
+
+
+@media (max-width: 600px) {
+    .speed-section {
+        padding: var(--spacing-sm);
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .speed-inputs {
+        flex-direction: row;
+        gap: var(--spacing-xs);
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .speed-input-group {
+        flex: 1 1 0%;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        min-width: 0;
+        width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .speed-input-group input {
+        font-size: var(--font-sm);
+        padding: 0;
+        min-width: 0;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .speed-input-group .unit {
+        font-size: var(--font-xs);
+        margin-left: var(--spacing-xs);
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .speed-title {
+        font-size: var(--font-base);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .formula-display {
+        padding: var(--spacing-sm);
+    }
+    
+    .formula-item,
+    .formula-result {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

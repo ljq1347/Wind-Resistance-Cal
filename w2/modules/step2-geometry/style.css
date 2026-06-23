@@ -1,0 +1,236 @@
+
+.step2-section {
+    padding: 10px;
+}
+
+
+.speed-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.speed-title {
+    margin: 0 0 12px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.speed-inputs {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.speed-input-group {
+    flex: 1 1 0%;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.speed-input-group.active {
+    opacity: 1;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(43, 87, 154, 0.1);
+}
+
+.speed-input-group input {
+    flex: 1 1 auto;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    background: transparent;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.speed-input-group .unit {
+    font-size: 0.9em;
+    color: #666;
+    font-weight: 600;
+    margin-left: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.step2-btn-row {
+    margin-top: var(--spacing-lg);
+    text-align: right;
+}
+
+.step2-btn-row button {
+    padding: var(--spacing-sm) var(--spacing-lg) !important;
+    background: var(--text-muted) !important;
+    color: var(--text-white) !important;
+    border: none !important;
+    border-radius: var(--radius-md) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    cursor: pointer !important;
+    transition: background 0.2s !important;
+}
+
+.step2-btn-row button:hover {
+    background: var(--text-secondary) !important;
+}
+
+.step2-btn-row button.confirmed {
+    background: var(--success-color) !important;
+}
+
+.step2-btn-row button.confirmed:hover {
+    background: var(--success-dark) !important;
+}
+
+
+.result-card {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 0.8em;
+    color: #999;
+    line-height: 1.8;
+}
+
+.result-card strong {
+    color: #999;
+    font-weight: normal;
+}
+
+.result-card .highlight {
+    color: #999;
+    font-weight: normal;
+}
+
+
+.formula-display {
+    margin-top: 20px;
+    padding: 15px;
+    background: none;
+    border-radius: 0;
+    border-left: none;
+}
+
+.formula-title {
+    margin: 0 0 10px 0;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #666;
+}
+
+.formula-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formula-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: baseline;
+}
+
+.formula-result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: baseline;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #eee;
+}
+
+.formula-label {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.75em;
+    white-space: nowrap;
+}
+
+.formula-text {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75em;
+    color: #888;
+}
+
+.formula-text.highlight {
+    color: #666;
+    font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+    .speed-section {
+        padding: 12px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .speed-inputs {
+        flex-direction: row;
+        gap: 6px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .speed-input-group {
+        flex: 1 1 0%;
+        padding: 6px 8px;
+        min-width: 0;
+        width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .speed-input-group input {
+        font-size: 0.85em;
+        padding: 0;
+        min-width: 0;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .speed-input-group .unit {
+        font-size: 0.75em;
+        margin-left: 4px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .speed-title {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    
+    .formula-display {
+        padding: 12px;
+    }
+    
+    .formula-item,
+    .formula-result {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

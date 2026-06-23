@@ -1,0 +1,46 @@
+<div class="step-content">
+    <div class="speed-section">
+        <h4 class="speed-title">Wind Speed</h4>
+        <div class="speed-inputs">
+            <div class="speed-input-group active" id="group-mph">
+                <input type="number" id="step1-mph" value="150" onchange="Step1App.convertSpeed('mph')" onclick="Step1App.selectInput('mph')">
+                <span class="unit">mph</span>
+            </div>
+            <div class="speed-input-group" id="group-ms">
+                <input type="number" id="step1-ms" onchange="Step1App.convertSpeed('ms')" onclick="Step1App.selectInput('ms')">
+                <span class="unit">m/s</span>
+            </div>
+            <div class="speed-input-group" id="group-kmh">
+                <input type="number" id="step1-kmh" onchange="Step1App.convertSpeed('kmh')" onclick="Step1App.selectInput('kmh')">
+                <span class="unit">km/h</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="wind-pressure-hint" id="step1-windPressureDisplay">Basic wind pressure pending calculation...</div>
+
+    <div class="form-row">
+        <div class="input-group">
+            <label>Air Density ρ (kg/m³)</label>
+            <input type="number" id="step1-airDensity" value="1.225" step="0.001">
+        </div>
+    </div>
+
+    <div class="step1-btn-row">
+        <button onclick="Step1App.confirm()">Confirm</button>
+    </div>
+    
+    
+    <div class="formula-display" id="step1-formula">
+        
+        <div class="standards-list">
+            <strong>Applicable Standards:</strong>
+            <div class="standards-items">
+                <div>ASCE 7-22 - Minimum Design Loads for Buildings and Other Structures</div>
+                <div>EN 1991-1-4:2005 - Eurocode 1: Wind Actions</div>
+                <div>AASHTO LRFD 2020 - Structural Supports for Highway Signs, Luminaires, and Traffic Signals</div>
+            </div>
+        </div>
+        
+    </div>
+</div>

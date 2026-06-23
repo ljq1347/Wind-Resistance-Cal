@@ -1,0 +1,45 @@
+<div class="step-content">
+    
+    <div style="display:block; width:100%;">
+        <div style="width:100%; margin-bottom:15px;">
+            <table class="check-table" style="width:100%;">
+                <tr><th colspan="2">Strength Check</th></tr>
+                <tr><td>Total Moment M_total</td><td id="totalMomentResult">-</td></tr>
+                <tr><td>Critical Section Stress σ</td><td id="stressResult">-</td></tr>
+                <tr><td>Safety Factor SF</td><td id="safetyFactorResult">-</td></tr>
+            </table>
+        </div>
+        <div style="width:100%;">
+            <table class="check-table" style="width:100%;">
+                <tr><th colspan="2">Deflection Check</th></tr>
+                <tr><td>Equivalent Diameter De</td><td id="deResult">-</td></tr>
+                <tr><td>Moment of Inertia I</td><td id="iResult">-</td></tr>
+                <tr><td>Pole Tip Deflection δ_pole</td><td id="poleDeflectionResult">-</td></tr>
+                <tr><td>Pole Deflection Ratio δ_pole/H</td><td id="poleDeflectionRatioResult">-</td></tr>
+                <tr><td>Total Deflection δ_total (with attachments)</td><td id="deflectionResult">-</td></tr>
+                <tr><td>Total Deflection Ratio δ_total/H</td><td id="deflectionRatioResult">-</td></tr>
+            </table>
+        </div>
+    </div>
+    <button onclick="runFullWindCalculation()" style="display: none;">Run Full Wind Load Calculation</button>
+    
+    
+    
+    
+    <div class="formula-display" id="step5-formula">
+        
+        <div class="standards-list">
+            <strong>Applicable Standards:</strong>
+            <div class="standards-items">
+                <div>ASCE 7-22 - Minimum Design Loads for Buildings and Other Structures</div>
+                <div>EN 1991-1-4:2005 - Eurocode 1: Wind Actions</div>
+                <div>AASHTO LRFD 2020 - Structural Supports for Highway Signs, Luminaires, and Traffic Signals</div>
+                <div>EN 40 - Lighting Columns (Steel and Aluminum)</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+</div>

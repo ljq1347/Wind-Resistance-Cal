@@ -1,0 +1,67 @@
+<div class="step-content">
+    
+    
+    <div class="speed-section">
+        <h4 class="speed-title">Arm Length</h4>
+        <div class="speed-inputs">
+            <div class="speed-input-group active" id="group-length-ft">
+                <input type="number" id="step3a4-length-ft" step="0.01" oninput="Step3a4App.convertUnit('length', 'foot')" onclick="Step3a4App.selectInput('length', 'ft')">
+                <span class="unit">ft</span>
+            </div>
+            <div class="speed-input-group" id="group-length-m">
+                <input type="number" id="step3a4-length" step="0.01" oninput="Step3a4App.convertUnit('length', 'meter')" onclick="Step3a4App.selectInput('length', 'm')">
+                <span class="unit">m</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="speed-section">
+        <h4 class="speed-title">Arm Width</h4>
+        <div class="speed-inputs">
+            <div class="speed-input-group active" id="group-width-ft">
+                <input type="number" id="step3a4-width-ft" step="0.01" oninput="Step3a4App.convertUnit('width', 'foot')" onclick="Step3a4App.selectInput('width', 'ft')">
+                <span class="unit">ft</span>
+            </div>
+            <div class="speed-input-group" id="group-width-m">
+                <input type="number" id="step3a4-width" step="0.01" oninput="Step3a4App.convertUnit('width', 'meter')" onclick="Step3a4App.selectInput('width', 'm')">
+                <span class="unit">m</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group">
+            <label>Shape Factor</label>
+            <input type="number" id="step3a4-shapeFactor" value="1" step="0.1">
+        </div>
+        <div class="input-group">
+            <label>Number of Arms</label>
+            <input type="number" id="step3a4-count" value="1" step="1">
+        </div>
+    </div>
+
+    <div class="result-card">
+        <strong>EPA (effective projected area):</strong> 
+        <span id="step3a4-epa" class="highlight">0.00 m²</span>
+        <span id="step3a4-epa-ft" style="margin-left: 15px; color: #666;">(0.00 ft²)</span>
+    </div>
+
+    <div class="btn-row">
+        <button onclick="Step3a4App.confirm()">Confirm</button>
+    </div>
+    
+    
+    <div class="formula-display" id="step3a4-formula">
+        
+        <div class="standards-list">
+            <strong>Applicable Standards:</strong>
+            <div class="standards-items">
+                <div>ASCE 7-22 - Minimum Design Loads for Buildings and Other Structures</div>
+                <div>AASHTO LRFD 2020 - Structural Supports for Highway Signs, Luminaires, and Traffic Signals</div>
+                <div>EN 1991-1-4:2005 - Eurocode 1: Wind Actions</div>
+                <div>EN 40 - Lighting Columns (Steel and Aluminum)</div>
+            </div>
+        </div>
+        
+    </div>
+</div>

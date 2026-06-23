@@ -1,0 +1,121 @@
+.step-content {
+    padding: 15px;
+}
+
+.step-content h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.check-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.check-table th,
+.check-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.check-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.check-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.step-content button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.step-content button:hover {
+    background: linear-gradient(135deg, #45a049, #3d8b40);
+}
+
+
+.formula-display {
+    margin-top: 20px;
+    padding: 15px;
+    background: none;
+    border-radius: 0;
+    border-left: none;
+}
+
+.formula-title {
+    margin: 0 0 10px 0;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #666;
+}
+
+.formula-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formula-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: baseline;
+}
+
+.formula-result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: baseline;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #eee;
+}
+
+.formula-label {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.75em;
+    white-space: nowrap;
+}
+
+.formula-text {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75em;
+    color: #888;
+}
+
+.formula-text.highlight {
+    color: #666;
+    font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+    .formula-display {
+        padding: 12px;
+    }
+    
+    .formula-item,
+    .formula-result {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

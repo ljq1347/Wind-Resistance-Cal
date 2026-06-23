@@ -1,0 +1,101 @@
+<div class="step-content">
+    <p class="warning-text">Each component uses its own installation height</p>
+    
+    <table class="check-table">
+        <tr><th>Component</th><th>Projected Area (m²)</th><th>Cf</th><th>CG Height (m/ft)</th><th>Moment</th></tr>
+        <tr>
+            <td>Main Pole</td>
+            <td><div class="input-wrapper area-input"><input type="number" id="step3-area1" value="0.91" step="0.01"></div></td>
+            <td><div class="input-wrapper cf-input"><input type="number" id="step3-cf1" value="0.6" step="0.1"></div></td>
+            <td>
+                <div class="double-input-container">
+                    <div class="input-wrapper no-border-input"><input type="number" id="step3-height1-ft" value="7.86" step="0.01"><span class="unit-inside">ft</span></div>
+                    <div class="input-wrapper no-border-input"><input type="number" id="step3-height1" value="2.395" step="0.001"><span class="unit-inside">m</span></div>
+                </div>
+            </td>
+            <td id="step3-moment1">-</td>
+        </tr>
+        <tr>
+            <td>Luminaire</td>
+            <td><div class="input-wrapper area-input"><input type="number" id="step3-area2" value="0.20" step="0.01"></div></td>
+            <td><div class="input-wrapper cf-input"><input type="number" id="step3-cf2" value="0.6" step="0.1"></div></td>
+            <td>
+                <div class="double-input-container">
+                    <div class="input-wrapper"><input type="number" id="step3-height2-ft" value="24.6" step="0.1"><span class="unit-inside">ft</span></div>
+                    <div class="input-wrapper"><input type="number" id="step3-height2" value="7.5" step="0.01"><span class="unit-inside">m</span></div>
+                </div>
+            </td>
+            <td id="step3-moment2">-</td>
+        </tr>
+        <tr>
+            <td>Arm</td>
+            <td><div class="input-wrapper area-input"><input type="number" id="step3-area6" value="0.15" step="0.01"></div></td>
+            <td><div class="input-wrapper cf-input"><input type="number" id="step3-cf6" value="0.6" step="0.1"></div></td>
+            <td>
+                <div class="double-input-container">
+                    <div class="input-wrapper"><input type="number" id="step3-height6-ft" value="24.0" step="0.1"><span class="unit-inside">ft</span></div>
+                    <div class="input-wrapper"><input type="number" id="step3-height6" value="7.32" step="0.01"><span class="unit-inside">m</span></div>
+                </div>
+            </td>
+            <td id="step3-moment6">-</td>
+        </tr>
+        <tr>
+            <td>LED Head</td>
+            <td><div class="input-wrapper area-input"><input type="number" id="step3-area3" value="0.80" step="0.01"></div></td>
+            <td><div class="input-wrapper cf-input"><input type="number" id="step3-cf3" value="1.0" step="0.1"></div></td>
+            <td>
+                <div class="double-input-container">
+                    <div class="input-wrapper"><input type="number" id="step3-height3-ft" value="24.6" step="0.1"><span class="unit-inside">ft</span></div>
+                    <div class="input-wrapper"><input type="number" id="step3-height3" value="7.5" step="0.01"><span class="unit-inside">m</span></div>
+                </div>
+            </td>
+            <td id="step3-moment3">-</td>
+        </tr>
+        <tr>
+            <td>Solar Panel</td>
+            <td><div class="input-wrapper area-input"><input type="number" id="step3-area4" value="1.00" step="0.01"></div></td>
+            <td><div class="input-wrapper cf-input"><input type="number" id="step3-cf4" value="1.3" step="0.1"></div></td>
+            <td>
+                <div class="double-input-container">
+                    <div class="input-wrapper"><input type="number" id="step3-height4-ft" value="26.9" step="0.1"><span class="unit-inside">ft</span></div>
+                    <div class="input-wrapper"><input type="number" id="step3-height4" value="8.2" step="0.01"><span class="unit-inside">m</span></div>
+                </div>
+            </td>
+            <td id="step3-moment4">-</td>
+        </tr>
+        <tr>
+            <td>Battery Box</td>
+            <td><div class="input-wrapper area-input"><input type="number" id="step3-area5" value="0.40" step="0.01"></div></td>
+            <td><div class="input-wrapper cf-input"><input type="number" id="step3-cf5" value="1.2" step="0.1"></div></td>
+            <td>
+                <div class="double-input-container">
+                    <div class="input-wrapper"><input type="number" id="step3-height5-ft" value="21.3" step="0.1"><span class="unit-inside">ft</span></div>
+                    <div class="input-wrapper"><input type="number" id="step3-height5" value="6.5" step="0.01"><span class="unit-inside">m</span></div>
+                </div>
+            </td>
+            <td id="step3-moment5">-</td>
+        </tr>
+        <tr style="background:#f0f4f8;">
+            <td><strong>Total</strong></td>
+            <td colspan="3"></td>
+            <td id="step3-totalMoment">-</td>
+        </tr>
+    </table>
+
+    <div class="step3-btn-row">
+        <button onclick="Step3bApp.confirm()">Confirm</button>
+    </div>
+ 
+    <div class="formula-display" id="step3b-formula">
+        
+        <div class="standards-list">
+            <strong>Applicable Standards:</strong>
+            <div class="standards-items">
+                <div>ASCE 7-22 - Minimum Design Loads for Buildings and Other Structures (Chapter 29-30)</div>
+                <div>EN 1991-1-4:2005 - Eurocode 1: Wind Actions</div>
+                <div>AASHTO LRFD 2020 - Structural Supports for Highway Signs, Luminaires, and Traffic Signals (Article 3.8)</div>
+            </div>
+        </div>
+        
+    </div>
+</div>

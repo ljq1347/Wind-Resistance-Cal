@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EPA Analysis Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+<div class="container">
+    
+
+    <div class="confirmed-panel" id="confirmedPanel">
+        <div class="confirmed-panel-header">
+            <span class="confirmed-panel-title">Confirmed Components</span>
+            <button class="confirmed-panel-toggle" id="confirmedPanelToggle">▼</button>
+        </div>
+        <div class="confirmed-panel-content">
+            <div id="confirmedItems"></div>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-title">Total EPA</span>
+            <button class="sidebar-toggle" id="sidebarToggle">▼</button>
+        </div>
+        <div class="sidebar-content">
+            <div class="total-summary">
+                <h3>Total Effective Projected Area</h3>
+                <table id="summary">
+                    <tr>
+                        <td>meter</td>
+                        <td id="totalB">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>foot</td>
+                        <td id="totalC">0.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-tabs">
+        <button class="tab-button" data-tab="panel0">Solar Panel</button>
+        <button class="tab-button" data-tab="panel1">Luminaire</button>
+        <button class="tab-button" data-tab="panel2">Battery Box</button>
+        <button class="tab-button" data-tab="panel3">Fixture Arm</button>
+    </div>
+
+    <div class="panels-container">
+        <div id="panel0" class="panel">
+            <div class="panel-header">
+                <span>Solar Panel</span>
+                <button class="close-btn">×</button>
+            </div>
+            <div class="panel-content">
+                <table id="table0">
+                    <tr>
+                        <th>Solar Panel</th>
+                        <th>meter</th>
+                        <th>foot</th>
+                    </tr>
+                    <tr>
+                        <td>Panel Length</td>
+                        <td><input type="number" id="table0b2" oninput="calculateAndConvert('table0', 'b2', 'c2', true)"></td>
+                        <td><input type="number" id="table0c2" oninput="calculateAndConvert('table0', 'c2', 'b2', true)"></td>
+                    </tr>
+                    <tr>
+                        <td>Panel Width</td>
+                        <td><input type="number" id="table0b3" oninput="calculateAndConvert('table0', 'b3', 'c3', true)"></td>
+                        <td><input type="number" id="table0c3" oninput="calculateAndConvert('table0', 'c3', 'b3', true)"></td>
+                    </tr>
+                    <tr>
+                        <td>Angle</td>
+                        <td><input type="number" id="table0b4" value="60" oninput="calculateAndConvert('table0', 'b4', 'c4', false)"></td>
+                        <td><input type="number" id="table0c4" value="60" oninput="calculateAndConvert('table0', 'c4', 'b4', false)"></td>
+                    </tr>
+                    <tr>
+                        <td>Shape Factor</td>
+                        <td colspan="2"><input type="number" id="table0b5" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Projected Length</td>
+                        <td id="table0b6"></td>
+                        <td id="table0c6"></td>
+                    </tr>
+                    <tr>
+                        <td>Projected Width</td>
+                        <td id="table0b7"></td>
+                        <td id="table0c7"></td>
+                    </tr>
+                    <tr>
+                        <td>Number of Panels</td>
+                        <td colspan="2"><input type="number" id="table0b8"></td>
+                    </tr>
+                    <tr>
+                        <td>EPA Panel</td>
+                        <td id="table0b9"></td>
+                        <td id="table0c9"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <button class="confirm-btn" data-panel="panel0">Confirm</button>
+            </div>
+        </div>
+
+        <div id="panel1" class="panel">
+            <div class="panel-header">
+                <span>Luminaire</span>
+                <button class="close-btn">×</button>
+            </div>
+            <div class="panel-content">
+                <table id="table1">
+                    <tr>
+                        <th>Luminaire</th>
+                        <th>meter</th>
+                        <th>foot</th>
+                    </tr>
+                    <tr>
+                        <td>Luminaire Length</td>
+                        <td><input type="number" id="table1b2" oninput="calculateAndConvert('table1', 'b2', 'c2', true)"></td>
+                        <td><input type="number" id="table1c2" oninput="calculateAndConvert('table1', 'c2', 'b2', true)"></td>
+                    </tr>
+                    <tr>
+                        <td>Luminaire Width</td>
+                        <td><input type="number" id="table1b3" oninput="calculateAndConvert('table1', 'b3', 'c3', true)"></td>
+                        <td><input type="number" id="table1c3" oninput="calculateAndConvert('table1', 'c3', 'b3', true)"></td>
+                    </tr>
+                    <tr>
+                        <td>Shape Factor</td>
+                        <td colspan="2"><input type="number" id="table1b4" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Number of Luminaires</td>
+                        <td colspan="2"><input type="number" id="table1b5"></td>
+                    </tr>
+                    <tr>
+                        <td>EPA Luminaire</td>
+                        <td id="table1b6"></td>
+                        <td id="table1c6"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <button class="confirm-btn" data-panel="panel1">Confirm</button>
+            </div>
+        </div>
+
+        <div id="panel2" class="panel">
+            <div class="panel-header">
+                <span>Battery Box</span>
+                <button class="close-btn">×</button>
+            </div>
+            <div class="panel-content">
+                <table id="table2">
+                    <tr>
+                        <th>Battery Box</th>
+                        <th>meter</th>
+                        <th>foot</th>
+                    </tr>
+                    <tr>
+                        <td>Battery Box Length</td>
+                        <td><input type="number" id="table2b2" oninput="calculateAndConvert('table2', 'b2', 'c2', true)"></td>
+                        <td><input type="number" id="table2c2" oninput="calculateAndConvert('table2', 'c2', 'b2', true)"></td>
+                    </tr>
+                    <tr>
+                        <td>Battery Box Width</td>
+                        <td><input type="number" id="table2b3" oninput="calculateAndConvert('table2', 'b3', 'c3', true)"></td>
+                        <td><input type="number" id="table2c3" oninput="calculateAndConvert('table2', 'c3', 'b3', true)"></td>
+                    </tr>
+                    <tr>
+                        <td>Shape Factor</td>
+                        <td colspan="2"><input type="number" id="table2b4" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Number of Battery Boxes</td>
+                        <td colspan="2"><input type="number" id="table2b5"></td>
+                    </tr>
+                    <tr>
+                        <td>EPA Battery Box</td>
+                        <td id="table2b6"></td>
+                        <td id="table2c6"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <button class="confirm-btn" data-panel="panel2">Confirm</button>
+            </div>
+        </div>
+
+        <div id="panel3" class="panel">
+            <div class="panel-header">
+                <span>Fixture Arm</span>
+                <button class="close-btn">×</button>
+            </div>
+            <div class="panel-content">
+                <table id="table3">
+                    <tr>
+                        <th>Fixture Arm</th>
+                        <th>meter</th>
+                        <th>foot</th>
+                    </tr>
+                    <tr>
+                        <td>Fixture Arm Length</td>
+                        <td><input type="number" id="table3b2" oninput="calculateAndConvert('table3', 'b2', 'c2', true)"></td>
+                        <td><input type="number" id="table3c2" oninput="calculateAndConvert('table3', 'c2', 'b2', true)"></td>
+                    </tr>
+                    <tr>
+                        <td>Fixture Arm Width</td>
+                        <td><input type="number" id="table3b3" oninput="calculateAndConvert('table3', 'b3', 'c3', true)"></td>
+                        <td><input type="number" id="table3c3" oninput="calculateAndConvert('table3', 'c3', 'b3', true)"></td>
+                    </tr>
+                    <tr>
+                        <td>Shape Factor</td>
+                        <td colspan="2"><input type="number" id="table3b4" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Number of Fixture Arms</td>
+                        <td colspan="2"><input type="number" id="table3b5"></td>
+                    </tr>
+                    <tr>
+                        <td>EPA Fixture Arm</td>
+                        <td id="table3b6"></td>
+                        <td id="table3c6"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <button class="confirm-btn" data-panel="panel3">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
